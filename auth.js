@@ -10,11 +10,10 @@ class Auth {
     //  oauth 授权跳转接口
     //  @param string url
     //  @param string scope
-    //  @param string state
     //  @return string
 
     getOauthRedirect(url, scope, state = "") {
-        return `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${this.appId}&redirect_uri=${url}&response_type=code&scope=${scope}&state=${state}#wechat_redirect`;
+        return `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${this.appId}&redirect_uri=${url}&response_type=code&scope=${scope}#wechat_redirect`;
     }
 
     // 通过code获取AccessToken（注意：这里是网页授权access_token，不是基础支持中的access_token）

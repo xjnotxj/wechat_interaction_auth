@@ -41,7 +41,7 @@ http.createServer(function (req, res) {
         let code = params.code || false;
         let red_uri = params.red_uri || false;
         let scope = params.scope || false;
-        let state = params.state || false;
+        let state = params.state.join("") || false;
 
         // 判断传入参数
         if (!code || !red_uri || !scope) {
